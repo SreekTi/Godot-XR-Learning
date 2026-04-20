@@ -1,3 +1,5 @@
+Label
+CanvasLayer
 MeshInstance3D
 GPUParticles3D
 TextEdit
@@ -7,7 +9,6 @@ VBoxContainer
 MarginContainer
 ColorRect
 Control
-CanvasLayer
 Node3D
 CollisionShape3D
 StaticBody3D

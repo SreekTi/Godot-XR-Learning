@@ -6,3 +6,4 @@ res://Scripts/xr_origin.gd
 res://Scenes/main.tscn
 res://Scripts/controllerDefaults.gd
 res://addons/godot-xr-tools/hands/poses/pose_default_right.tres
+res://Scenes/musicMenu.tscn
