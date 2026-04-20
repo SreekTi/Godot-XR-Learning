@@ -1,4 +1,5 @@
 MeshInstance3D
+GPUParticles3D
 TextEdit
 HSlider
 Button
@@ -11,4 +12,3 @@ Node3D
 CollisionShape3D
 StaticBody3D
 Node2D
-XRController3D

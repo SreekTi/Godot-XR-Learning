@@ -31,7 +31,7 @@ project/assembly_name="Godot Xr tutorial"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg")
 
 [layer_names]
 
@@ -61,4 +61,5 @@ renderer/rendering_method.mobile="gl_compatibility"
 [xr]
 
 openxr/enabled=true
+openxr/default_action_map="uid://b1hc0a71su2wr"
 shaders/enabled=true
