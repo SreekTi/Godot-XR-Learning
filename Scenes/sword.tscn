@@ -6,9 +6,10 @@
 [ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="4_v4ynp"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="5_v4ynp"]
 [ext_resource type="Animation" uid="uid://do01jton6rk42" path="res://addons/godot-xr-tools/hands/animations/right/Cup.res" id="6_83fnj"]
+[ext_resource type="Script" uid="uid://0b7wkxi4vymb" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="7_5uo8h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_83fnj"]
-size = Vector3(0.05, 1.45, 0.05)
+size = Vector3(0.05, 1.6200196, 0.05)
 
 [sub_resource type="BoxMesh" id="BoxMesh_74bdg"]
 size = Vector3(0.05, 0.05, 0.05)
@@ -28,26 +29,63 @@ script = ExtResource("4_v4ynp")
 closed_pose = ExtResource("6_83fnj")
 metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 
+[sub_resource type="Resource" id="Resource_ksptp"]
+script = ExtResource("4_v4ynp")
+closed_pose = ExtResource("3_rx5id")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
+[sub_resource type="Resource" id="Resource_5uo8h"]
+script = ExtResource("4_v4ynp")
+closed_pose = ExtResource("6_83fnj")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
+[sub_resource type="BoxMesh" id="BoxMesh_4gx3d"]
+flip_faces = true
+size = Vector3(0.06, 0.051, 0.06)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_641iy"]
+shading_mode = 0
+albedo_color = Color(1, 1, 0, 1)
+
 [node name="Sword" unique_id=1973335216 instance=ExtResource("1_74bdg")]
 
 [node name="CollisionShape3D" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52788913, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44287938, 0)
 shape = SubResource("BoxShape3D_83fnj")
 
 [node name="handle" type="MeshInstance3D" parent="." index="1" unique_id=1165753940]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 5.977235, 0, -1, 0, -4.371139e-08, 0, -0.044880837, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 9.052107, 0, -1, 0, -4.371139e-08, 0, -0.13931645, 0)
 mesh = SubResource("BoxMesh_74bdg")
 
 [node name="blade" type="MeshInstance3D" parent="." index="2" unique_id=1819753817]
 transform = Transform3D(-1.0900215e-07, 0, 0.22687688, 0, 5.977235, 0, -2.4936788, 0, -9.917104e-09, 0, 0.64817995, 0)
 mesh = SubResource("CylinderMesh_e4ynd")
 
-[node name="GrabPointHandLeft" parent="." index="3" unique_id=399703582 instance=ExtResource("2_dwvek")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05805196)
+[node name="GrabPointHandLeftMain" parent="." index="3" unique_id=399703582 instance=ExtResource("2_dwvek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.027198449, -0.05805196)
+mode = 1
 hand_pose = SubResource("Resource_fahsa")
-editor_preview_mode = 1
 
-[node name="GrabPointHandRight" parent="." index="4" unique_id=1730180635 instance=ExtResource("5_v4ynp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05805196)
+[node name="GrabPointHandRightMain" parent="." index="4" unique_id=1730180635 instance=ExtResource("5_v4ynp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.027198449, -0.05805196)
+mode = 1
 hand_pose = SubResource("Resource_1o1wo")
-editor_preview_mode = 1
+
+[node name="GrabPointHandLeftSecondary" parent="." index="5" unique_id=811767977 instance=ExtResource("2_dwvek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007972091, -0.18221617, -0.0699433)
+mode = 2
+hand_pose = SubResource("Resource_ksptp")
+
+[node name="GrabPointHandRight" parent="." index="6" unique_id=806002570 instance=ExtResource("5_v4ynp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17520192, -0.0687687)
+mode = 2
+hand_pose = SubResource("Resource_5uo8h")
+
+[node name="XRToolsHighlightVisible" type="Node3D" parent="." index="7" unique_id=1637196244]
+script = ExtResource("7_5uo8h")
+metadata/_custom_type_script = "uid://0b7wkxi4vymb"
+
+[node name="HighlightMesh" type="MeshInstance3D" parent="XRToolsHighlightVisible" index="0" unique_id=629193855]
+transform = Transform3D(1, 0, 0, 0, 9.052107, 0, 0, 0, 1, 0, -0.13933444, 0)
+mesh = SubResource("BoxMesh_4gx3d")
+surface_material_override/0 = SubResource("StandardMaterial3D_641iy")

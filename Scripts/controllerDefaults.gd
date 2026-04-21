@@ -14,7 +14,7 @@ signal released
 		is_gripped = value
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta):
 	is_gripped = get_float("grip") > threshold and get_float("trigger") > threshold
 	if(is_gripped):
 		$GPUParticles3D.emitting = true
