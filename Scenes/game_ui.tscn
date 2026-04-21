@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://ckkwkje0321eg"]
 
+[ext_resource type="Script" uid="uid://dhb1rdgmydfk1" path="res://Scenes/main_menu.gd" id="1_gek4i"]
+
 [node name="gameUI" type="CanvasLayer" unique_id=378613411]
 
 [node name="Control" type="Control" parent="." unique_id=485938356]
@@ -7,6 +9,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_gek4i")
 
 [node name="ColorRect" type="ColorRect" parent="Control" unique_id=1395845515]
 texture_filter = 1
@@ -41,3 +44,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 16
 placeholder_text = "Type text here!"
 backspace_deletes_composite_character_enabled = true
+
+[connection signal="pressed" from="Control/ColorRect/MarginContainer/VBoxContainer/Button" to="Control" method="_on_button_pressed"]
