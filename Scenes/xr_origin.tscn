@@ -54,11 +54,20 @@ script = ExtResource("1_1cx2o")
 
 [node name="XRCamera3D" type="XRCamera3D" parent="." unique_id=1211235657]
 
-[node name="LeftHand" type="XRController3D" parent="." unique_id=1928806945]
+[node name="LeftHand" type="XRController3D" parent="." unique_id=1928806945 node_paths=PackedStringArray("handParticles")]
 tracker = &"left_hand"
 script = ExtResource("7_2texp")
+handParticles = NodePath("LeftHand/GPUParticles3D")
 
 [node name="LeftHand" parent="LeftHand" unique_id=980555113 instance=ExtResource("1_jw5w6")]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="LeftHand/LeftHand" unique_id=71767401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014314078, -0.002221126, 0)
+emitting = false
+amount = 6
+lifetime = 0.7
+process_material = SubResource("ParticleProcessMaterial_1cx2o")
+draw_pass_1 = SubResource("QuadMesh_r1pme")
 
 [node name="MovementDirect" parent="LeftHand" unique_id=732449142 instance=ExtResource("2_v0u4l")]
 strafe = true
@@ -73,25 +82,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02, 0.05, -0.1)
 show_laser = 2
 laser_length = 1
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="LeftHand" unique_id=71767401]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014314078, -0.002221126, 0)
-emitting = false
-amount = 6
-lifetime = 0.7
-process_material = SubResource("ParticleProcessMaterial_1cx2o")
-draw_pass_1 = SubResource("QuadMesh_r1pme")
-
 [node name="handInteractAreaLeft" type="Area3D" parent="LeftHand" unique_id=338359621]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LeftHand/handInteractAreaLeft" unique_id=1745793856]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2332878e-05, 0.007446289, -0.028282672)
 shape = SubResource("BoxShape3D_r1pme")
 
-[node name="RightHand" type="XRController3D" parent="." unique_id=663809882]
+[node name="RightHand" type="XRController3D" parent="." unique_id=663809882 node_paths=PackedStringArray("handParticles")]
 tracker = &"right_hand"
 script = ExtResource("7_2texp")
+handParticles = NodePath("RightHand/GPUParticles3D")
 
 [node name="RightHand" parent="RightHand" unique_id=1273797599 instance=ExtResource("2_rturn")]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="RightHand/RightHand" unique_id=825983392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012431636, -0.0039115287, 0)
+emitting = false
+amount = 6
+lifetime = 0.7
+process_material = SubResource("ParticleProcessMaterial_1cx2o")
+draw_pass_1 = SubResource("QuadMesh_r1pme")
 
 [node name="MovementTurn" parent="RightHand" unique_id=450203253 instance=ExtResource("4_3hom5")]
 turn_mode = 1
@@ -109,14 +119,6 @@ jump_button_action = "ax_button"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 0.05, -0.1)
 show_laser = 2
 laser_length = 1
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="RightHand" unique_id=825983392]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012431636, -0.0039115287, 0)
-emitting = false
-amount = 6
-lifetime = 0.7
-process_material = SubResource("ParticleProcessMaterial_1cx2o")
-draw_pass_1 = SubResource("QuadMesh_r1pme")
 
 [node name="handInteractAreaRight" type="Area3D" parent="RightHand" unique_id=1527485973]
 

@@ -49,6 +49,8 @@ closed_pose = ExtResource("11_gthea")
 metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 
 [node name="PickableObject" unique_id=1316423025 instance=ExtResource("1_j2sdn")]
+mass = 10.0
+second_hand_grab = 2
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014648438, 0.34178305, 0.010398865)
@@ -112,12 +114,26 @@ script = ExtResource("5_4otlb")
 
 [node name="GrabPointHandLeft" parent="." index="6" unique_id=1544079159 instance=ExtResource("7_1vfmg")]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.058139205, 0.3231471, -0.09031139)
-visible = true
 hand_pose = SubResource("Resource_yixqq")
 
-[node name="GrabPointHandRight" parent="." index="7" unique_id=1335023887 instance=ExtResource("10_s56v4")]
+[node name="GrabPointHandLeft2" parent="." index="7" unique_id=887495261 instance=ExtResource("7_1vfmg")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.16797338, 0.3231471, -0.09031139)
+hand_pose = SubResource("Resource_yixqq")
+
+[node name="GrabPointHandLeft3" parent="." index="8" unique_id=402025444 instance=ExtResource("7_1vfmg")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.26700836, 0.32314706, -0.09031139)
+hand_pose = SubResource("Resource_yixqq")
+
+[node name="GrabPointHandRight" parent="." index="9" unique_id=1335023887 instance=ExtResource("10_s56v4")]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.04234247, 0.3231471, -0.09031139)
-visible = true
+hand_pose = SubResource("Resource_4pjnk")
+
+[node name="GrabPointHandRight2" parent="." index="10" unique_id=2141760874 instance=ExtResource("10_s56v4")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.25447518, 0.3231471, -0.09031139)
+hand_pose = SubResource("Resource_4pjnk")
+
+[node name="GrabPointHandRight3" parent="." index="11" unique_id=1062836758 instance=ExtResource("10_s56v4")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.17703345, 0.32314712, -0.09031139)
 hand_pose = SubResource("Resource_4pjnk")
 
 [connection signal="area_entered" from="button" to="button" method="_on_area_entered"]
