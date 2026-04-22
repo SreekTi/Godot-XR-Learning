@@ -131,6 +131,11 @@ physics = SubResource("Resource_owk0p")
 ground_control = 2
 
 [node name="MovementFlight" parent="." unique_id=72380258 instance=ExtResource("12_1cx2o")]
+enabled = false
 
+[connection signal="has_dropped" from="LeftHand/FunctionPickup" to="LeftHand" method="_on_function_pickup_has_dropped"]
+[connection signal="has_picked_up" from="LeftHand/FunctionPickup" to="LeftHand" method="_on_function_pickup_has_picked_up"]
 [connection signal="button_pressed" from="RightHand" to="." method="_on_right_hand_button_pressed"]
 [connection signal="input_float_changed" from="RightHand" to="." method="_on_right_hand_input_float_changed"]
+[connection signal="has_dropped" from="RightHand/FunctionPickup" to="RightHand" method="_on_function_pickup_has_dropped"]
+[connection signal="has_picked_up" from="RightHand/FunctionPickup" to="RightHand" method="_on_function_pickup_has_picked_up"]

@@ -10,4 +10,3 @@ func changeSong(songName):
 
 func _physics_process(delta):
 	$".".volume_db = linear_to_db(Globals.speakerVolume)
-	print($".".volume_db)
