@@ -2,6 +2,8 @@ res://Scenes/game_ui.tscn
 res://openxr_action_map.tres
 res://addons/godot-xr-tools/hands/animations/left/hand_blend_tree.tres
 res://addons/godot-xr-tools/hands/animations/right/hand_blend_tree.tres
-res://Scenes/speakersPickable.tscn
-res://Scenes/mainMenu.tscn
-res://Scenes/main_menu.gd
+res://Scenes/xr_origin.tscn
+res://Scenes/musicMenu.tscn
+res://Scripts/musicMenu.gd
+res://Scenes/sword.tscn
+res://Scenes/sword.gd

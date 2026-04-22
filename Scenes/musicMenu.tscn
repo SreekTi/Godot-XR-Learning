@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cvljrn2hcoqls"]
 
-[ext_resource type="Script" uid="uid://bc8ho10y6dvwy" path="res://Scenes/musicMenu.gd" id="1_cfrde"]
+[ext_resource type="Script" uid="uid://bc8ho10y6dvwy" path="res://Scripts/musicMenu.gd" id="1_cfrde"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=927690154]
 follow_viewport_enabled = true

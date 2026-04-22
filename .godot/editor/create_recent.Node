@@ -1,4 +1,10 @@
 Node3D
+Button
+PopupMenu
+CheckButton
+OptionButton
+TabContainer
+TabBar
 Label
 MeshInstance3D
 CollisionShape3D
@@ -6,9 +12,3 @@ Area3D
 AudioStreamPlayer3D
 RigidBody3D
 CanvasLayer
-GPUParticles3D
-TextEdit
-HSlider
-Button
-VBoxContainer
-MarginContainer
