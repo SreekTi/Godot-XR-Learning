@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://ckkwkje0321eg" path="res://Scenes/game_ui.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://uejbqgsbuhk2" path="res://Scenes/speakersPickable.tscn" id="8_344ge"]
+[ext_resource type="PackedScene" uid="uid://bo2dpae16s0f2" path="res://Scenes/freeFlyCamera.tscn" id="9_ynf5e"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -61,6 +62,8 @@ transparency = 1
 
 [node name="Main" type="Node3D" unique_id=1296449042]
 script = ExtResource("1_0xm2m")
+
+[node name="Camera3D" parent="." unique_id=1595908686 instance=ExtResource("9_ynf5e")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=354109329]
 environment = SubResource("Environment_1bvp3")

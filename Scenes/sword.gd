@@ -1,11 +1,11 @@
-extends XRToolsPickable
+@tool extends XRToolsPickable 
 
 #signal controllerInput(XRController3D)
 #test to see if works
 #var held_by = null
 #var held_controller : XRController3D = null
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if get_picked_up_by_controller():
 		pass
 		#print("sword picked up!")

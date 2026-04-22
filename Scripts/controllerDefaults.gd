@@ -26,7 +26,7 @@ var held_object = null
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta):
 	# Cursed Energy mode
 	is_energy = get_float("grip") > threshold and get_float("trigger") > threshold and is_button_pressed("ax_button")
 	#is_sword = get_float("grip") > threshold and is_button_pressed("by_button")

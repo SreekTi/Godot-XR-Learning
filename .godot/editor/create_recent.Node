@@ -1,3 +1,4 @@
+Camera3D
 StaticBody2D
 Node3D
 Button
@@ -11,5 +12,3 @@ MeshInstance3D
 CollisionShape3D
 Area3D
 AudioStreamPlayer3D
-RigidBody3D
-CanvasLayer

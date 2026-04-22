@@ -1,10 +1,8 @@
-res://Scenes/sword.tscn
+res://Scenes/main.tscn
 res://openxr_action_map.tres
 res://addons/godot-xr-tools/hands/animations/left/hand_blend_tree.tres
 res://addons/godot-xr-tools/hands/animations/right/hand_blend_tree.tres
-res://Scenes/sword.gd
-res://Scenes/main.tscn
-res://Scenes/xr_origin.tscn
 res://Scripts/controllerDefaults.gd
-res://Scripts/xr_origin.gd
 res://Scripts/speakersMusic.gd
+res://Scenes/sword.gd
+res://freeflycamera.gd

@@ -8,5 +8,5 @@ func changeSong(songName):
 	$".".stream = load(songName)
 	$".".play()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	$".".volume_db = linear_to_db(Globals.speakerVolume)
