@@ -17,6 +17,7 @@ signal released
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	is_gripped = get_float("grip") > threshold and get_float("trigger") > threshold
+#	print(self.velocity)
 	if(is_gripped):
 		handParticles.emitting = true
 	else:

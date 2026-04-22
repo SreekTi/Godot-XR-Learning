@@ -7,3 +7,5 @@ res://Scenes/musicMenu.tscn
 res://Scripts/musicMenu.gd
 res://Scenes/sword.tscn
 res://Scenes/sword.gd
+res://Scripts/controllerDefaults.gd
+res://Scripts/main_menu.gd
